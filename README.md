@@ -8,6 +8,11 @@ or<br>
 
 ## Usage
 
+```javascript
+import createId from "create-id";
+const createId = require("create-id");
+```
+
 createId can be called with no arguments to make a 20 character id<br>
 
 ```javascript
@@ -51,14 +56,16 @@ createId(null, null, null, "01") => "11110011000100100011"
 createId(null, null, null, "1234567890ABCDEF") => "01B5E21371E9DB262996"
 ```
 
-```javascript
-createId("myPrefix-", "_mySuffix", 10, "1234567890") => "myPrefix-1217738484_mySuffix"
-createId("game-", "_2019", 32, "1234567890ABCDEF") =>"game-71BE363570E799222CABE7C5D94BC444_2019"
-createId("game-") + createId("_", "#import", 6) => "game-z6QFnS3wr21dt8pe66J6_XIySVz#import"
-```
-
 If returned id is an empty string the default method occurs
 
 ```javascript
 createId(null, null, 0, "!@#$") => "q8jOrZIXaKjJU5wnCvUX"
+```
+
+### Examples
+
+```javascript
+createId("myPrefix-", "_mySuffix", 10, "1234567890") => "myPrefix-1217738484_mySuffix"
+createId("game-", "_2019", 32, "1234567890ABCDEF") =>"game-71BE363570E799222CABE7C5D94BC444_2019"
+createId("game-") + createId("_", "#import", 6) => "game-z6QFnS3wr21dt8pe66J6_XIySVz#import"
 ```
