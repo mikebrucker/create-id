@@ -69,3 +69,10 @@ createId("myPrefix-", "_mySuffix", 10, "1234567890") => "myPrefix-1217738484_myS
 createId("game-", "_2019", 32, "1234567890ABCDEF") =>"game-71BE363570E799222CABE7C5D94BC444_2019"
 createId("game-") + createId("_", "#import", 6) => "game-z6QFnS3wr21dt8pe66J6_XIySVz#import"
 ```
+
+Create random hexadecimal colors
+
+```javascript
+createId("#", null, 6, "1234567890abcdef") => "#6482d1"
+createId("#", null, 6, "1234567890abcdef") => "#f14a87"
+```
